@@ -1,1 +1,26 @@
-/* Better ChatGPT — no custom styles needed */
+/* Floating generation timer */
+#better-chatgpt-timer {
+  position: fixed;
+  bottom: 16px;
+  right: 20px;
+  z-index: 9999;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
+  font-size: 13px;
+  line-height: 1.4;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+#better-chatgpt-timer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
